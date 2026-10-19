@@ -5,22 +5,6 @@ The project demonstrates a modern React front‑end (Vite) integrated with a Dja
 
 ---  
 
-## Table of Contents
-- [Demo](#demo)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Local Development](#local-development)
-  - [Running with Docker](#running-with-docker)
-- [API Documentation](#api-documentation)
-- [Contributing](#contributing)
-- [License](#license)
-
----  
-
----  
 
 ## Features
 - **Asset Management** – CRUD operations for assets, investments, and documents.  
