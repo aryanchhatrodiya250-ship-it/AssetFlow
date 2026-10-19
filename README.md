@@ -20,9 +20,6 @@ The project demonstrates a modern React front‑end (Vite) integrated with a Dja
 
 ---  
 
-## Demo
-> A live demo can be added here (e.g., Netlify, Vercel, or a self‑hosted URL).
-
 ---  
 
 ## Features
