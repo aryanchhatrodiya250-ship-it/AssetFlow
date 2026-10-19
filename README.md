@@ -24,6 +24,3 @@ The project demonstrates a modern React front‑end (Vite) integrated with a Dja
 | Containerisation | Docker, Docker‑Compose |
 | Version Control | Git + GitHub |
 
----  
-
-## Project Structure
