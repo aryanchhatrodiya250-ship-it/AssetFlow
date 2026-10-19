@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  # MongoDB Database
+  mongodb:
+    image: mongo:6.0
+    container_name: assetflow_db
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - assetflow_net
+
+  # Django Backend API
+  backend:
+    build: ./backend
+    container_name: assetflow_backend
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017
+      - MONGO_DB_NAME=assetflow
+      - SECRET_KEY=django-insecure-docker-orchestrated-key-1029384756
+      - DEBUG=True
+      - JWT_SECRET=jwt-super-secret-assetflow-key
+    depends_on:
+      - mongodb
+    networks:
+      - assetflow_net
+
+  # React Frontend (Nginx static server)
+  frontend:
+    build: ./frontend
+    container_name: assetflow_frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - assetflow_net
+
+volumes:
+  mongo_data:
+
+networks:
+  assetflow_net:
+    driver: bridge

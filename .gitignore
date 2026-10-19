@@ -1,0 +1,15 @@
+# Python
+*.pyc
+__pycache__/
+env/
+venv/
+# Node / React
+node_modules/
+dist/
+build/
+# OS / IDE artifacts
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
